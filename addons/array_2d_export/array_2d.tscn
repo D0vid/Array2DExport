@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7yhfnx7unjfc"]
+
+[ext_resource type="Script" path="res://addons/array_2d_export/Array2DGrid.cs" id="2_li00r"]
+
+[node name="MainContainer" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -910.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSeparator2" type="HSeparator" parent="."]
+layout_mode = 2
+
+[node name="GridSizeContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="GridSizeLabel" type="Label" parent="GridSizeContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Grid size"
+
+[node name="GridSizeSpinBox" type="SpinBox" parent="GridSizeContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 32.0
+value = 3.0
+
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Left click (+) / Right click (-)"
+horizontal_alignment = 1
+
+[node name="Array2DGrid" type="GridContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 3
+script = ExtResource("2_li00r")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+text = "1 : Center / 2 : AoE"
+horizontal_alignment = 1
+
+[node name="ResetButton" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Reset"
+
+[node name="HSeparator3" type="HSeparator" parent="."]
+layout_mode = 2

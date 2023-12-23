@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdvf1pqp0s52c"]
+
+[ext_resource type="Script" path="res://addons/array_2d_export/DebugScript.cs" id="1_ebd5i"]
+[ext_resource type="Script" path="res://addons/array_2d_export/DebugResource.cs" id="2_ovwbp"]
+
+[sub_resource type="Resource" id="Resource_nutuq"]
+script = ExtResource("2_ovwbp")
+DebugResourceArray2D = [[0, 0, 2, 0, 0], [0, 2, 2, 2, 0], [2, 2, 1, 2, 2], [0, 2, 2, 2, 0], [0, 0, 2, 0, 0]]
+
+[node name="DebugNode" type="Node2D"]
+script = ExtResource("1_ebd5i")
+ShapeArray2D = SubResource("Resource_nutuq")
