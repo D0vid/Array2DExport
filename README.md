@@ -5,5 +5,9 @@ Usage
 * Its name must contain **Array2D**
 
 ```csharp
-[Export] public DebugResource ShapeArray2D { get; private set; }
+[GlobalClass]
+public partial class DebugResource : Resource
+{
+    [Export] public Array<Array<int>> DebugResourceArray2D;
+}
 ```
